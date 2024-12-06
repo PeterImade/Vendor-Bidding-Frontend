@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="card" style="width:400px">
+            <div class="card-body">
+                <h4 class="card-title">{{project.name}}</h4>
+                <p class="card-text">{{project.description}}</p>
+                <p class="card-text">{{project.budget}}</p>
+                <p class="card-text">{{project.currency}}</p>
+                <p class="card-text">{{project.category}}</p>
+            </div>
+        </div>
+        <form (ngSubmit)="onSubmitBid()">
+            <div class="form-group">
+              <label for="bidAmount">Bid Amount</label>
+              <input type="number" class="form-control" id="bidAmount" [(ngModel)]="bidAmount" name="bidAmount" required>
+            </div>
+            <button type="submit" class="btn btn-success">Submit Bid</button>
+        </form>
+    </div>
+</div>
